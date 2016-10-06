@@ -1,0 +1,15 @@
+<% if @alert %>
+<%= @alert %>
+<% end %>
+
+<% if @user.admin == true %>
+  ADMIN</br>
+<%end%>
+
+Name: <%= @user.name %> </br>
+Mood: <%= @user.mood %></br>
+Height: <%= @user.height %></br>
+Tickets: <%= @user.tickets %></br>
+
+<%= link_to "Home", root_path %></br>
+<%= link_to "Edit", edit_user_path(@user) %>
