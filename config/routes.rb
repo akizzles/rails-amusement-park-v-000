@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # routes for sessions controller
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
-  get '/signout' => 'sessions#destroy'
+  delete '/signout' => 'sessions#destroy'
 
   resources :attractions
   resources :users
