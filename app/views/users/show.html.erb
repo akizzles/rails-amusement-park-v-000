@@ -2,8 +2,8 @@
 <%= @alert %>
 <% end %>
 
-<% if @user.admin == true %>
-  ADMIN</br>
+<% if @user.admin %>
+  <p>ADMIN</p>
 <%end%>
 
 Name: <%= @user.name %> </br>
@@ -13,3 +13,5 @@ Tickets: <%= @user.tickets %></br>
 
 <%= link_to "Home", root_path %></br>
 <%= link_to "Edit", edit_user_path(@user) %>
+<%= link_to "See attractions", attractions_path %>
+<%= link_to "Log Out", signout_path %>
